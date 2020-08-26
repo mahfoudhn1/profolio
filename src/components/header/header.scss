@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@800&display=swap');
+.header{
+    background: radial-gradient(circle, rgba(1,2,3,.7) 10%, rgba(36, 36, 36, .8) 40%), url(back.jpg) ;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+
+}
+.body{
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    padding: 5% 0% 0px 20%;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    h1:nth-child(2){
+        padding-left: 3%;
+        font-size: 2rem !important;
+    }
+    .header-p{
+        padding-left: 6%;
+        border-right: solid 3px #fff;
+        white-space: nowrap;
+        overflow: hidden;    
+        font-size: 28px;
+        color: #fff;
+        animation: animated-text 4s steps(29,end) 1s 1 normal both,
+                    animated-cursor 600ms steps(29,end) infinite;
+    }
+
+}
+  
+
+.scroll-downs {
+  position: absolute;
+  right: 0;
+  bottom: 40px;
+  left: 0;
+  margin: auto;
+  cursor: pointer;
+  width :34px;
+  height: 55px;
+  .mousey {
+    width: 3px;
+    padding: 10px 15px;
+    height: 35px;
+    border: 2px solid #fff;
+    border-radius: 25px;
+    opacity: 0.75;
+    box-sizing: content-box;
+  }
+  .scroller {
+    width: 3px;
+    height: 10px;
+    border-radius: 25%;
+    background-color: #fff;
+    animation-name: scroll;
+    animation-duration: 2.2s;
+    animation-timing-function: cubic-bezier(.15,.41,.69,.94);
+    animation-iteration-count: infinite;
+  }
+}
+
+@keyframes scroll {
+  0% { opacity: 0; }
+  10% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(15px); opacity: 0;}
+}
+  
+  @keyframes animated-text{
+    from{width: 0;}
+    to{width: 472px;}
+  }
+  
+  /* cursor animations */
+  
+  @keyframes animated-cursor{
+    from{border-right-color: #fff;}
+    to{border-right-color: transparent;}
+  }
